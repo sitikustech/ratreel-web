@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>RatReel Video Editor</title>
+      <script type="module" crossorigin src="/assets/index-YD4ivNAV.js"></script>
+      <link rel="stylesheet" crossorigin href="/assets/index-CKJLA2t0.css">
+    </head>
+    <body oncontextmenu="return!1">
+        <div class="context-menu" id="context-menu"></div>
+        <div id="workspace">
+            <div class="side-panel">
+                <div>
+                    <div id="panel-wrapper"></div>
+                </div>
+                <div id="side-panel-drawer">
+                    <div class="wrapper">
+                        <div class="header">
+                            <h2 id="panel-title">title</h2>
+                            <button id="side-panel-drawer-close" title="close">
+                                <i data-lucide="x"></i>
+                            </button>
+                        </div>
+                        <div id="body"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="editor-panel">
+                <button
+                    style="position: fixed; right: 0; top: 0"
+                    id="editor-export"
+                    title="export"
+                >
+                    <i data-lucide="arrow-up-from-line"></i>
+                    export
+                </button>
+                <div id="editor-preview"></div>
+                <div
+                    style="
+                        display: flex;
+                        justify-content: space-between;
+                        align-items: center;
+                        gap: 5px;
+                    "
+                >
+                    <button
+                        id="play-btn"
+                        tabindex="0"
+                        onclick="window.editor.playHead.play()"
+                        title="play"
+                        style="border-radius: 50%"
+                    >
+                        <i data-lucide="play"></i>
+                    </button>
+                    <div>
+                        <span id="playhead-dur">00:00:00</span> /
+                        <span id="proj-dur">00:00:00</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="timeline-wrapper-main">
+            <div id="timeline-header">
+                <div class="dev-note">
+                    <p><img src="/nyancat.gif" /> alpha ver</p>
+                    <p>
+                        Trying to figure out core system first. Once it is
+                        ready, then we go for more fancy stufff!!!😍 stay tuned
+                    </p>
+                </div>
+                <div
+                    id="timeline-header-layer"
+                    class="timeline-layer-head"
+                    data-layer-count="1"
+                ></div>
+            </div>
+            <div id="timeline-width-adjust"></div>
+            <div id="timeline">
+                <div id="timeline-strip"></div>
+                <div id="timeline-cursor" data-trimming="false"></div>
+                <div id="timeline-playhead">
+                    <div class="head"></div>
+                    <div class="body"></div>
+                </div>
+                <div id="timeline-wrapper">
+                    <div id="timeline-content-wrapper"></div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
