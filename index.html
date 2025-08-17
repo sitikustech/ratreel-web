@@ -2,11 +2,47 @@
 <html lang="en">
     <head>
         <meta charset="UTF-8" />
-        <link rel="icon" type="image/svg+xml" href="/vite.svg" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>RatReel Video Editor</title>
-      <script type="module" crossorigin src="/ratreel-web/assets/index-nm8XUMll.js"></script>
-      <link rel="stylesheet" crossorigin href="/ratreel-web/assets/index-BcOss6tP.css">
+        <title>ratreel - Effortless Video Editing at Your Fingertips</title>
+        <meta name="robots" content="index, follow" />
+        <!-- <link rel="canonical" href="https://www.ratreel.com/"> -->
+
+        <meta
+            name="description"
+            content="Transform your video editing experience with ratreel! Enjoy seamless, free, and offline editing without the hassle of registration. Your data stays secure on your device."
+        />
+        <meta
+            name="keywords"
+            content="free video editor, online video editing, no registration video editor, offline video editing, quick video edits, intuitive video editor, best free video editor, video editing tool, fast video editing, secure video editing, easy video editor, ratreel, browser-based video editor, video creation tool, video editing for students, content creator video tool"
+        />
+
+        <!-- Open Graph Meta Tags -->
+        <meta
+            property="og:title"
+            content="ratreel - Effortless Video Editing at Your Fingertips"
+        />
+        <meta
+            property="og:description"
+            content="Transform your video editing experience with ratreel! Enjoy seamless, free, and offline editing without the hassle of registration. Your data stays secure on your device."
+        />
+        <!-- <meta property="og:image" content="https://www.ratreel.com/images/preview.jpg">
+        <meta property="og:url" content="https://www.ratreel.com/">
+        <meta property="og:type" content="website">  -->
+
+        <!-- Twitter Card Meta Tags -->
+        <!-- <meta name="twitter:card" content="summary_large_image"> -->
+        <meta
+            name="twitter:title"
+            content="ratreel - Effortless Video Editing at Your Fingertips"
+        />
+        <meta
+            name="twitter:description"
+            content="Transform your video editing experience with ratreel! Enjoy seamless, free, and offline editing without the hassle of registration. Your data stays secure on your device."
+        />
+        <!-- <meta name="twitter:image" content="https://www.ratreel.com/images/preview.jpg">  -->
+
+      <script type="module" crossorigin src="/ratreel-web/assets/index-DQ-9F6AZ.js"></script>
+      <link rel="stylesheet" crossorigin href="/ratreel-web/assets/index-Cedk2LXU.css">
     </head>
     <body oncontextmenu="return!1">
         <div class="context-menu" id="context-menu"></div>
@@ -27,16 +63,25 @@
                     </div>
                 </div>
             </div>
-
-            <div class="editor-panel">
-                <button
-                    style="position: fixed; right: 0; top: 0"
-                    id="editor-export"
-                    title="export"
-                >
-                    <i data-lucide="arrow-up-from-line"></i>
-                    export
-                </button>
+            <div id="editor-panel">
+                <div style="position: fixed; right: 0; top: 0; display: flex">
+                    <button
+                        id="editor-save"
+                        title="save"
+                        onclick="window.editor.myProject.save()"
+                    >
+                        <i data-lucide="save"></i>
+                        save
+                    </button>
+                    <button
+                        id="editor-export"
+                        title="export"
+                        onclick="window.editor.myProject.exportVideo()"
+                    >
+                        <i data-lucide="arrow-up-from-line"></i>
+                        export
+                    </button>
+                </div>
                 <div id="editor-preview"></div>
                 <div
                     style="
@@ -62,6 +107,11 @@
                 </div>
             </div>
         </div>
+        <div id="timeline-height-adjust"></div>
+        <!-- <script
+            type="module"
+            src="/src/components/workspace/side-panel"
+        ></script> -->
         <div id="timeline-wrapper-main">
             <div id="timeline-header">
                 <div class="dev-note">
@@ -89,6 +139,14 @@
                     <div id="timeline-content-wrapper"></div>
                 </div>
             </div>
+            <!-- <script
+                type="module"
+                src="/src/components/timeline/timeline-init.ts"
+            ></script> -->
         </div>
+        <!-- <script
+            type="module"
+            src="/src/components/timeline/timeline-content.ts"
+        ></script> -->
     </body>
 </html>
